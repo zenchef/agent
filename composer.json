@@ -10,6 +10,7 @@
             "homepage": "https://jenssegers.com"
         }
     ],
+    "minimum-stability": "master",
     "repositories":[
         {
             "type": "git",
