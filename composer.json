@@ -1,5 +1,5 @@
 {
-    "name": "jenssegers/agent",
+    "name": "anatole1001/agent",
     "description": "A PHP desktop/mobile user agent parser with support for Laravel, based on Mobiledetect",
     "keywords": ["laravel", "useragent", "agent", "user agent", "browser", "platform", "mobile"],
     "homepage": "https://github.com/jenssegers/agent",
