@@ -19,16 +19,20 @@ class AgentServiceProvider extends ServiceProvider {
         //
     }
 
-    /**
-     * Register the service provider.
-     */
-    public function register()
+    /*public function register()
     {
-        //$this->app['agent'] = $this->app->share(function ($app)
-        $this->app['agent'] = $this->app->singleton(function ($app)
+        $this->app['agent'] = $this->app->share(function ($app)
         {
             return new Agent($app['request']->server->all());
         });
+    }*/
+
+    public function register()
+    {
+        $this->app->singleton('agent', function ($app) {
+            return new Agent($app['request']->server());
+        });
+        $this->app->alias('agent', Agent::class);
     }
 
 }
