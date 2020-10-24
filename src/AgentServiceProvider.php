@@ -24,7 +24,8 @@ class AgentServiceProvider extends ServiceProvider {
      */
     public function register()
     {
-        $this->app['agent'] = $this->app->share(function ($app)
+        //$this->app['agent'] = $this->app->share(function ($app)
+        $this->app['agent'] = $this->app->singleton(function ($app)
         {
             return new Agent($app['request']->server->all());
         });
